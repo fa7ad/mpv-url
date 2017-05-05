@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=mpv url handler
+GenericName=Multimedia player
+Comment=Handle URL Scheme mpv://
+Exec=mpv-url %u
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/mpv;
+Icon=link
+Categories=AudioVideo;Audio;Video;Player;TV;

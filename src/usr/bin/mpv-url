@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# delete "mpv://"
+request=${1:6}
+# "decode" uri components"
+request=${request//%2F//}
+
+# launch mpv
+mpv $request
