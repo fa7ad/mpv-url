@@ -2,8 +2,12 @@
 
 # delete "mpv://"
 request=${1:6}
-# "decode" uri components"
-request=${request//%2F//}
+# "decode" uri components
+decoded=$(printf '%b' "${request//%/\\x}")
 
 # launch mpv
-mpv $request
+if [ -x "$(command -v mpvh)" ]; then
+  mpvh "$decoded"
+else
+  mpv "$decoded"
+fi
