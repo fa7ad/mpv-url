@@ -6,8 +6,4 @@ request=${1:6}
 decoded=$(printf '%b' "${request//%/\\x}")
 
 # launch mpv
-if [ -x "$(command -v mpvh)" ]; then
-  mpvh "$decoded"
-else
-  mpv "$decoded"
-fi
+mpv "$decoded"
